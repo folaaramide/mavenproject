@@ -19,7 +19,7 @@ pipeline
           { sh 'mvn test' }} }  
 
 
-        stage('generate artifact')   //mnv package to generate artifact.
+        stage('generate artifact')   //mnv package to generate artifact
         { steps { withMaven(globalMavenSettingsConfig: '', jdk: 'JAVA_HOME', maven: 'MAVEN_HOME', mavenSettingsConfig: '', traceability: true) 
           { sh 'mvn package' }} }  
 
