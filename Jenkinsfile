@@ -14,12 +14,16 @@ pipeline
 
 
     
-        stage('execute unit test framework')   //mnv test to perform unit testing
+        stage('execute unit test framework')   //mnv test to perform unit testing.
         { steps { withMaven(globalMavenSettingsConfig: '', jdk: 'JAVA_HOME', maven: 'MAVEN_HOME', mavenSettingsConfig: '', traceability: true) 
           { sh 'mvn test' }} }  
 
 
+<<<<<<< HEAD
         stage('generate artifact')   //mnv package to generate artifact.
+=======
+        stage('generate artifact')   //mnv package to generate artifa
+>>>>>>> ca107b1f903d6f2ba0a428e76ab0acc511ac9050
         { steps { withMaven(globalMavenSettingsConfig: '', jdk: 'JAVA_HOME', maven: 'MAVEN_HOME', mavenSettingsConfig: '', traceability: true) 
           { sh 'mvn package' }} }  
 
